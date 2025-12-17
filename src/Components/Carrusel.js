@@ -26,7 +26,8 @@ const Carrusel = () => {
     useEffect(() => {
         const intervalo = setInterval(() => {
             setIndice((prev) => (prev + 1) % imagenes.length);
-            console.log(fecha, hora);
+            //console.log(fecha, hora);
+            //porsiacaso  en caso nos pida trabajar con formato de tiempo y hora
         }, 3000); // 3 segundos
         
         return () => clearInterval(intervalo);
