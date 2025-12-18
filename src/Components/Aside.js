@@ -23,7 +23,7 @@ class Aside extends Component {
                 <aside id="sidebar">
                     <div id="nav-blog" className="sidebar-item">
                         <h3>Puedes hacer esto</h3>
-                        <a href="#" className="btn btn-success">Crear artículo</a>
+                        <a href="#" className="btn btn-success d-block mx-auto">Crear artículo</a>
                     </div>
 
                     <div id="search" className="sidebar-item">
@@ -31,7 +31,7 @@ class Aside extends Component {
                         <p>Encuentra el artículo que buscas</p>
                         <form  onSubmit={this.test} >
                             <input type="text" name="search" />
-                            <input type="submit" name="submit" value="Buscar" className="btn" 
+                            <input type="submit" name="submit" value="Buscar" className="btn d-block mx-auto" 
                             disabled={!this.state.estado}/>
                         </form>
                     </div>

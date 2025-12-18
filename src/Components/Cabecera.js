@@ -20,17 +20,20 @@ class Cabecera extends Component {
                                 <NavLink to="/" className={({isActive}) => isActive ? "active":""}>Inicio</NavLink>
                             </li>
                             <li>
-                                <NavLink to="prueba-exs">Blog</NavLink>
+                                <NavLink to="prueba-exs" className={({isActive}) => isActive ? "active":""}>Blog</NavLink>
                             </li>
                             <li>
-                                <NavLink to="formulario">Formulario</NavLink>
+                                <NavLink to="formulario" className={({isActive}) => isActive ? "active":""}>Formulario</NavLink>
                             </li>
                             <li>
-                                <NavLink to="upload">Subir Imagen</NavLink>
+                                <NavLink to="upload" className={({isActive}) => isActive ? "active":""}>Subir Imagen</NavLink>
                             </li>
-                             <li>
-                                <NavLink to="*">Pagina 2</NavLink>
-                            </li>                  
+                            <li>
+                                <NavLink to="botoncarrusel" className={({isActive}) => isActive ? "active":""}>Boton Carrusel</NavLink>
+                            </li>             
+                            <li>
+                                <NavLink to="*" className={({isActive}) => isActive ? "active":""}>Pagina 2</NavLink>
+                            </li>
                         </ul>
                     </nav>
                     <div className="clearfix"></div>

@@ -68,12 +68,14 @@ body {
 }
 
 #menu ul{
+    /*border:2px solid green;*/
     line-height: 85px;
-    width: 60%;
+    /*width: 50%;*/
     float:right;
 }
 
 #menu ul li{
+    /*border:2px solid red;*/
     display: inline-block;
     list-style: none;
     height: 46px;
@@ -119,11 +121,12 @@ body {
 
 .btn-white{
     display: block;
+    /*border:2px solid red;*/
     background: white;
     color:rgb(88, 88, 88);
-    padding: 10px;
+    padding: 3px;
     width: 100px;
-    height: 35px;
+    height: 40px;
     margin: 0px auto;
     font-size: 18px;
     text-transform: uppercase;
@@ -136,6 +139,10 @@ body {
     transition: 300ms all;
 }
 
+.botoncitos {
+    display: flex;
+    justify-content: space-between;
+}
 .btn-white:hover{
     background: #444;
     color:white;
@@ -198,9 +205,9 @@ body {
    cursor:pointer;
 }
 
-.btn-success{
+.boton{
     background: rgb(23, 150, 19);
-    width: 100%;
+    width: 100px;
 }
 
 .btn-success:hover{

@@ -18,7 +18,7 @@ class Pelicula extends Component {
                     duracion {duracion}
                 </span>
                 <a href="#">Leer más</a>
-                <button onClick={()=> {this.marcar(nombre)}}>Marcar como favorito</button>
+                <button className="btn  btn-sm  btn-success " onClick={()=> {this.marcar(nombre)}}>Marcar como favorito</button>
                 <div className="clearfix"></div>
             </article>
         )

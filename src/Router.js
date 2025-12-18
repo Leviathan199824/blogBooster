@@ -15,6 +15,7 @@ import RoleRoute from "./Components/RoleRoute";
 import NoAutorizado from "./Components/NoAutorizado";
 import Login from "./Components/Login";
 import HomeAdmin from "./Components/HomeAdmin";
+import BotonCarrusel from "./Components/BotonCarrusel";
 class Router extends Component {
     render() {
         return (
@@ -45,6 +46,7 @@ class Router extends Component {
                     <Route path="/prueba-exs" element={<Pruebas />} />
                     <Route path="/formulario" element={<Formulario />} />
                     <Route path="/upload" element={<Upload />} />
+                    <Route path="/botoncarrusel" element={<BotonCarrusel />} />
                     <Route path="/no-autorizado" element={<NoAutorizado />} />
                     <Route path="*" element={<Error />}></Route>
                 </Routes>
