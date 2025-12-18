@@ -1,5 +1,6 @@
 import Bootstrap from "./Bootstrap";
 import Carrusel from "./Carrusel";
+import Validation from "./Validation";
 export default function HomeAdmin() {
   return (
     <div className="text-center">
@@ -10,6 +11,7 @@ export default function HomeAdmin() {
         <section id="content">
           <h1 className="subheader">imagenes</h1>
           <Carrusel></Carrusel>
+          <Validation></Validation>
         </section>
       </div>
     </div>

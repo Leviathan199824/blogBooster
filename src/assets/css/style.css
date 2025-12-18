@@ -232,10 +232,12 @@ input[type="text"],
 input[type="number"],
 input[type="email"],
 input[type="password"],
+input[type="option"],
 textarea{
     width: 100%;
     min-height: 30px;
-    border: 1px solid #ccc;
+    border: 1px solid #52a6e1;
+    border-radius: 5px;
     padding: 3px;
     margin-bottom: 5px;
     transition: 300ms all;

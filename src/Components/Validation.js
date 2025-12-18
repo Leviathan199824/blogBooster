@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { useState } from "react";
 
 function Validation() {
   const {
@@ -7,7 +8,7 @@ function Validation() {
     watch,
     formState: { errors }
   } = useForm();
-
+  const [showPassword, setShowPassword] = useState(false);
   const onSubmit = (data) => {
     console.log("Formulario válido:", data);
   };
@@ -21,18 +22,20 @@ function Validation() {
       <form onSubmit={handleSubmit(onSubmit)}>
 
         {/* NOMBRE */}
-        <label>Nombre</label>
-        <input
+        <label>Nombre: </label>
+        <input type="text"
           {...register("nombre", {
             required: "El nombre es obligatorio",
             minLength: { value: 2, message: "Mínimo 2 caracteres" }
           })}
         />
+        <hr></hr>
+        <br></br>
         {errors.nombre && <p style={{ color: "red" }}>{errors.nombre.message}</p>}
 
         {/* EMAIL */}
-        <label>Email</label>
-        <input
+        <label>Email :</label>
+        <input type="email"
           {...register("email", {
             required: "El email es obligatorio",
             pattern: {
@@ -41,35 +44,48 @@ function Validation() {
             }
           })}
         />
+        <hr></hr>
+        <br></br>
         {errors.email && <p style={{ color: "red" }}>{errors.email.message}</p>}
 
         {/* PASSWORD */}
-        <label>Password</label>
+        <label>Password :</label>
         <input
-          type="password"
+          type={showPassword ? "text" : "password"}
           {...register("password", {
             required: "El password es obligatorio",
             minLength: { value: 6, message: "Mínimo 6 caracteres" }
           })}
         />
+        <button
+          type="button" className="btn btn-success"
+          onClick={() => setShowPassword(!showPassword)}
+        >
+          {showPassword ? "Ocultar" : "Mostrar"}
+        </button>
+        <hr></hr>
+        <br></br>
+        
         {errors.password && <p style={{ color: "red" }}>{errors.password.message}</p>}
 
         {/* CONFIRM PASSWORD */}
-        <label>Confirm Password</label>
+        <label>Confirm Password:</label>
         <input
-          type="password"
+          type={showPassword ? "text" : "password"}
           {...register("confirmPassword", {
             required: "Debe confirmar el password",
-            validate: (value) =>
+            validate: value =>
               value === password || "Las contraseñas no coinciden"
           })}
         />
+        <hr></hr>
+        <br></br>
         {errors.confirmPassword && (
           <p style={{ color: "red" }}>{errors.confirmPassword.message}</p>
         )}
 
         {/* EDAD */}
-        <label>Edad</label>
+        <label>Edad :</label>
         <input
           type="number"
           {...register("edad", {
@@ -78,10 +94,12 @@ function Validation() {
             max: { value: 99, message: "Debe ser menor de 99" }
           })}
         />
+        <hr></hr>
+        <br></br>
         {errors.edad && <p style={{ color: "red" }}>{errors.edad.message}</p>}
 
         {/* SELECT */}
-        <label>País</label>
+        <label>País: </label>
         <select
           {...register("pais", { required: "Debe seleccionar un país" })}
         >
@@ -90,9 +108,11 @@ function Validation() {
           <option value="mx">México</option>
           <option value="ar">Argentina</option>
         </select>
+        <hr></hr>
+        <br></br>
         {errors.pais && <p style={{ color: "red" }}>{errors.pais.message}</p>}
 
-        <button type="submit">Enviar</button>
+        <button type="submit" className="btn btn-success">Enviar</button>
       </form>
     </div>
   );
